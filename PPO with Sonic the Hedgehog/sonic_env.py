@@ -133,7 +133,7 @@ def make_env(env_idx):
     #record_path = "./records/" + dicts[env_idx]['state']
     env = make(game=dicts[env_idx]['game'], state=dicts[env_idx]['state'])#, bk2dir="./records")#record='/tmp')
 
-    # Build the actions array, 
+    # Build the actions array,
     env = ActionsDiscretizer(env)
 
     # Scale the rewards
@@ -156,7 +156,7 @@ def make_env(env_idx):
 def make_test():
     """
     Create an environment with some standard wrappers.
-    
+
     dicts = [
         {'game': 'SonicTheHedgehog2-Genesis', 'state': 'EmeraldHillZone.Act1'},
         {'game': 'SonicTheHedgehog2-Genesis', 'state': 'ChemicalPlantZone.Act2'},
@@ -176,7 +176,7 @@ def make_test():
     # Here we add record because we want to output a video
     env = make(game="SonicAndKnuckles3-Genesis", state="AngelIslandZone.Act1")
 
-    # Build the actions array, 
+    # Build the actions array,
     env = ActionsDiscretizer(env)
 
     # Scale the rewards
@@ -234,4 +234,3 @@ def make_train_11():
 
 def make_train_12():
     return make_env(12)
-
